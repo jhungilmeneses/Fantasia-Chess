@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "VT323", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Press Start 2P", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  /* You can enable this if you want Background.png to be your main background */
+  /* background-image: url('/Background.png'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-attachment: fixed; */
+  background-color: #1a1a1a;
+}
+
+@keyframes floatPiece {
+  0%, 100% {
+    transform: translateY(0);
+    filter: brightness(1.2) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.4));
+  }
+  50% {
+    transform: translateY(-8px);
+    filter: brightness(1.4) drop-shadow(0px 18px 15px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.piece-selected {
+  animation: floatPiece 2s ease-in-out infinite;
+}
